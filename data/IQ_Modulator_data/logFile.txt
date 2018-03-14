@@ -1,0 +1,1046 @@
+
+hpeesofsim (*) 470.shp Oct 16 2017, MINT version 4
+    (64-bit windows built: Tue Oct 17, 2017 04:23:43 +0000)
+Copyright 1989 - 2017 Keysight Technologies.
+
+Warning detected by hpeesofsim in topology check during circuit set up.
+    Number of nodes with only one device attached (topology corrected): 2
+
+
+CT Sweep2[1] <SignalGenerator_lib:IQ Modulator:schematic>   IPwrDBM=(-20->0)
+Message from hpeesofsim during TRAN analysis `Tran1'.
+    Required filter order is calculated to be 13 for component
+                 `LPF2.CMP1'
+Message from hpeesofsim during TRAN analysis `Tran1'.
+    Required filter order is calculated to be 13 for component
+                 `LPF1.CMP1'
+Warning detected by hpeesofsim during TRAN analysis `Tran1'.
+    COMPONENT `X9.SnP1.CMP1':
+       Highest frequency in data is 6.01e+09 Hz, which is smaller than the maximum source bandwidth 8e+09 Hz.
+
+COMPONENT : X9.SnP1.CMP1
+    Characterizing to 6.01 GHz 
+
+COMPONENT : X7.SnP1.CMP1
+    Characterizing to 8 GHz 
+Warning detected by hpeesofsim during TRAN analysis `Tran1'.
+    COMPONENT `X5.SnP1.CMP1':
+       Highest frequency in data is 6.01e+09 Hz, which is smaller than the maximum source bandwidth 8e+09 Hz.
+
+COMPONENT : X5.SnP1.CMP1
+    Characterizing to 6.01 GHz 
+Warning detected by hpeesofsim during TRAN analysis `Tran1'.
+    COMPONENT `X4.SnP1.CMP1':
+       Highest frequency in data is 6.01e+09 Hz, which is smaller than the maximum source bandwidth 8e+09 Hz.
+
+COMPONENT : X4.SnP1.CMP1
+    Characterizing to 6.01 GHz 
+
+COMPONENT : X3.SnP1.CMP1
+    Characterizing to 8 GHz 
+
+COMPONENT : X2.SnP1.CMP1
+    Characterizing to 8 GHz 
+
+COMPONENT : X8.AMP1.SDD3P3
+    Characterizing to 8 GHz 
+
+    Use an adaptive sample spacing of 15.63 MHz.
+
+COMPONENT : X1.MIX2
+    Characterizing to 8 GHz 
+
+    Use an adaptive sample spacing of 1.953 MHz.
+.
+COMPONENT : X1.MIX1
+    Characterizing to 8 GHz 
+
+    Use an adaptive sample spacing of 1.953 MHz.
+.
+COMPONENT : TL52
+    Characterizing to 8 GHz 
+
+COMPONENT : TL51
+    Characterizing to 8 GHz 
+
+COMPONENT : TL50
+    Characterizing to 8 GHz 
+
+COMPONENT : TL49
+    Characterizing to 8 GHz 
+
+COMPONENT : TL48
+    Characterizing to 8 GHz 
+
+COMPONENT : TL47
+    Characterizing to 8 GHz 
+
+COMPONENT : TL46
+    Characterizing to 8 GHz 
+
+COMPONENT : TL45
+    Characterizing to 8 GHz 
+
+COMPONENT : TL40
+    Characterizing to 8 GHz 
+
+COMPONENT : TL41
+    Characterizing to 8 GHz 
+
+COMPONENT : TL42
+    Characterizing to 8 GHz 
+
+COMPONENT : TL39
+    Characterizing to 8 GHz 
+
+COMPONENT : TL43
+    Characterizing to 8 GHz 
+
+COMPONENT : TL36
+    Characterizing to 8 GHz 
+
+COMPONENT : TL44
+    Characterizing to 8 GHz 
+
+COMPONENT : TL34
+    Characterizing to 8 GHz 
+
+COMPONENT : TL33
+    Characterizing to 8 GHz 
+
+COMPONENT : TL31
+    Characterizing to 8 GHz 
+
+COMPONENT : TL30
+    Characterizing to 8 GHz 
+
+COMPONENT : TL29
+    Characterizing to 8 GHz 
+
+COMPONENT : TL28
+    Characterizing to 8 GHz 
+
+COMPONENT : TL27
+    Characterizing to 8 GHz 
+
+COMPONENT : TL26
+    Characterizing to 8 GHz 
+
+COMPONENT : TL25
+    Characterizing to 8 GHz 
+
+COMPONENT : TL24
+    Characterizing to 8 GHz 
+
+COMPONENT : TL23
+    Characterizing to 8 GHz 
+
+COMPONENT : TL22
+    Characterizing to 8 GHz 
+
+COMPONENT : TL21
+    Characterizing to 8 GHz 
+
+COMPONENT : TL20
+    Characterizing to 8 GHz 
+
+COMPONENT : TL19
+    Characterizing to 8 GHz 
+
+COMPONENT : TL18
+    Characterizing to 8 GHz 
+
+COMPONENT : TL17
+    Characterizing to 8 GHz 
+
+COMPONENT : TL16
+    Characterizing to 8 GHz 
+
+COMPONENT : TL15
+    Characterizing to 8 GHz 
+
+COMPONENT : TL14
+    Characterizing to 8 GHz 
+
+COMPONENT : TL13
+    Characterizing to 8 GHz 
+
+COMPONENT : TL12
+    Characterizing to 8 GHz 
+
+COMPONENT : TL11
+    Characterizing to 8 GHz 
+
+COMPONENT : TL10
+    Characterizing to 8 GHz 
+
+COMPONENT : TL9
+    Characterizing to 8 GHz 
+
+COMPONENT : TL8
+    Characterizing to 8 GHz 
+
+COMPONENT : TL7
+    Characterizing to 8 GHz 
+
+COMPONENT : TL4
+    Characterizing to 8 GHz 
+
+COMPONENT : TL3
+    Characterizing to 8 GHz 
+
+COMPONENT : TL2
+    Characterizing to 8 GHz 
+
+COMPONENT : TL5
+    Characterizing to 8 GHz 
+
+COMPONENT : TL6
+    Characterizing to 8 GHz 
+
+COMPONENT : TL1
+    Characterizing to 8 GHz 
+Pt DC convergence is used.
+
+    Matrix is singular (detected between nodes or branches `N__23' and `LPF2.CMP1.i2').
+Adding gmin to branches
+..Warning detected by hpeesofsim during DC analysis `Tran1'.
+    Circuit converged after a virtual resistance of 1 TOhms 
+    was added between each node and ground, and a virtual 
+    resistance of 1 pOhms was inserted in each current branch. 
+    Possible causes include floating nodes or missing ground.
+
+
+COMPONENT : X8.AMP1.SDD3P3
+    Characterizing to 8 GHz 
+
+    Use an adaptive sample spacing of 15.63 MHz.
+
+COMPONENT : X1.MIX2
+    Characterizing to 8 GHz 
+
+    Use an adaptive sample spacing of 1.953 MHz.
+.
+COMPONENT : X1.MIX1
+    Characterizing to 8 GHz 
+
+    Use an adaptive sample spacing of 1.953 MHz.
+.
+
+TRAN Sweep2[1].Tran1[1/5] <SignalGenerator_lib:IQ Modulator:schematic>  IPwrDBM=-20  time=(0 s->200 ns)
+Warning detected by hpeesofsim during TRAN analysis `Tran1'.
+    MaxTimeStep reduced to  6.250e-11 to resolve source bandwidth.
+
+
+COMPONENT : X9.SnP1.CMP1
+    Characterizing to 6.01 GHz 
+
+COMPONENT : X7.SnP1.CMP1
+    Characterizing to 8 GHz 
+
+COMPONENT : X5.SnP1.CMP1
+    Characterizing to 6.01 GHz 
+
+COMPONENT : X4.SnP1.CMP1
+    Characterizing to 6.01 GHz 
+
+COMPONENT : X3.SnP1.CMP1
+    Characterizing to 8 GHz 
+
+COMPONENT : X2.SnP1.CMP1
+    Characterizing to 8 GHz 
+
+COMPONENT : X8.AMP1.SDD3P3
+    Characterizing to 8 GHz 
+
+    Use an adaptive sample spacing of 15.63 MHz.
+
+COMPONENT : X1.MIX2
+    Characterizing to 8 GHz 
+
+    Use an adaptive sample spacing of 1.953 MHz.
+.
+COMPONENT : X1.MIX1
+    Characterizing to 8 GHz 
+
+    Use an adaptive sample spacing of 1.953 MHz.
+.
+COMPONENT : TL52
+    Characterizing to 8 GHz 
+
+COMPONENT : TL51
+    Characterizing to 8 GHz 
+
+COMPONENT : TL50
+    Characterizing to 8 GHz 
+
+COMPONENT : TL49
+    Characterizing to 8 GHz 
+
+COMPONENT : TL48
+    Characterizing to 8 GHz 
+
+COMPONENT : TL47
+    Characterizing to 8 GHz 
+
+COMPONENT : TL46
+    Characterizing to 8 GHz 
+
+COMPONENT : TL45
+    Characterizing to 8 GHz 
+
+COMPONENT : TL40
+    Characterizing to 8 GHz 
+
+COMPONENT : TL41
+    Characterizing to 8 GHz 
+
+COMPONENT : TL42
+    Characterizing to 8 GHz 
+
+COMPONENT : TL39
+    Characterizing to 8 GHz 
+
+COMPONENT : TL43
+    Characterizing to 8 GHz 
+
+COMPONENT : TL36
+    Characterizing to 8 GHz 
+
+COMPONENT : TL44
+    Characterizing to 8 GHz 
+
+COMPONENT : TL34
+    Characterizing to 8 GHz 
+
+COMPONENT : TL33
+    Characterizing to 8 GHz 
+
+COMPONENT : TL31
+    Characterizing to 8 GHz 
+
+COMPONENT : TL30
+    Characterizing to 8 GHz 
+
+COMPONENT : TL29
+    Characterizing to 8 GHz 
+
+COMPONENT : TL28
+    Characterizing to 8 GHz 
+
+COMPONENT : TL27
+    Characterizing to 8 GHz 
+
+COMPONENT : TL26
+    Characterizing to 8 GHz 
+
+COMPONENT : TL25
+    Characterizing to 8 GHz 
+
+COMPONENT : TL24
+    Characterizing to 8 GHz 
+
+COMPONENT : TL23
+    Characterizing to 8 GHz 
+
+COMPONENT : TL22
+    Characterizing to 8 GHz 
+
+COMPONENT : TL21
+    Characterizing to 8 GHz 
+
+COMPONENT : TL20
+    Characterizing to 8 GHz 
+
+COMPONENT : TL19
+    Characterizing to 8 GHz 
+
+COMPONENT : TL18
+    Characterizing to 8 GHz 
+
+COMPONENT : TL17
+    Characterizing to 8 GHz 
+
+COMPONENT : TL16
+    Characterizing to 8 GHz 
+
+COMPONENT : TL15
+    Characterizing to 8 GHz 
+
+COMPONENT : TL14
+    Characterizing to 8 GHz 
+
+COMPONENT : TL13
+    Characterizing to 8 GHz 
+
+COMPONENT : TL12
+    Characterizing to 8 GHz 
+
+COMPONENT : TL11
+    Characterizing to 8 GHz 
+
+COMPONENT : TL10
+    Characterizing to 8 GHz 
+
+COMPONENT : TL9
+    Characterizing to 8 GHz 
+
+COMPONENT : TL8
+    Characterizing to 8 GHz 
+
+COMPONENT : TL7
+    Characterizing to 8 GHz 
+
+COMPONENT : TL4
+    Characterizing to 8 GHz 
+
+COMPONENT : TL3
+    Characterizing to 8 GHz 
+
+COMPONENT : TL2
+    Characterizing to 8 GHz 
+
+COMPONENT : TL5
+    Characterizing to 8 GHz 
+
+COMPONENT : TL6
+    Characterizing to 8 GHz 
+
+COMPONENT : TL1
+    Characterizing to 8 GHz 
+
+    Matrix is singular (detected between nodes or branches `N__23' and `LPF2.CMP1.i2').
+Adding gmin to branches
+..
+
+COMPONENT : X8.AMP1.SDD3P3
+    Characterizing to 8 GHz 
+
+    Use an adaptive sample spacing of 15.63 MHz.
+
+COMPONENT : X1.MIX2
+    Characterizing to 8 GHz 
+
+    Use an adaptive sample spacing of 1.953 MHz.
+..
+COMPONENT : X1.MIX1
+    Characterizing to 8 GHz 
+
+    Use an adaptive sample spacing of 1.953 MHz.
+.
+
+TRAN Sweep2[1].Tran1[2/5] <SignalGenerator_lib:IQ Modulator:schematic>  IPwrDBM=-15  time=(0 s->200 ns)
+
+
+COMPONENT : X9.SnP1.CMP1
+    Characterizing to 6.01 GHz 
+
+COMPONENT : X7.SnP1.CMP1
+    Characterizing to 8 GHz 
+
+COMPONENT : X5.SnP1.CMP1
+    Characterizing to 6.01 GHz 
+
+COMPONENT : X4.SnP1.CMP1
+    Characterizing to 6.01 GHz 
+
+COMPONENT : X3.SnP1.CMP1
+    Characterizing to 8 GHz 
+
+COMPONENT : X2.SnP1.CMP1
+    Characterizing to 8 GHz 
+
+COMPONENT : X8.AMP1.SDD3P3
+    Characterizing to 8 GHz 
+
+    Use an adaptive sample spacing of 15.63 MHz.
+
+COMPONENT : X1.MIX2
+    Characterizing to 8 GHz 
+
+    Use an adaptive sample spacing of 1.953 MHz.
+.
+COMPONENT : X1.MIX1
+    Characterizing to 8 GHz 
+
+    Use an adaptive sample spacing of 1.953 MHz.
+.
+COMPONENT : TL52
+    Characterizing to 8 GHz 
+
+COMPONENT : TL51
+    Characterizing to 8 GHz 
+
+COMPONENT : TL50
+    Characterizing to 8 GHz 
+
+COMPONENT : TL49
+    Characterizing to 8 GHz 
+
+COMPONENT : TL48
+    Characterizing to 8 GHz 
+
+COMPONENT : TL47
+    Characterizing to 8 GHz 
+
+COMPONENT : TL46
+    Characterizing to 8 GHz 
+
+COMPONENT : TL45
+    Characterizing to 8 GHz 
+
+COMPONENT : TL40
+    Characterizing to 8 GHz 
+
+COMPONENT : TL41
+    Characterizing to 8 GHz 
+
+COMPONENT : TL42
+    Characterizing to 8 GHz 
+
+COMPONENT : TL39
+    Characterizing to 8 GHz 
+
+COMPONENT : TL43
+    Characterizing to 8 GHz 
+
+COMPONENT : TL36
+    Characterizing to 8 GHz 
+
+COMPONENT : TL44
+    Characterizing to 8 GHz 
+
+COMPONENT : TL34
+    Characterizing to 8 GHz 
+
+COMPONENT : TL33
+    Characterizing to 8 GHz 
+
+COMPONENT : TL31
+    Characterizing to 8 GHz 
+
+COMPONENT : TL30
+    Characterizing to 8 GHz 
+
+COMPONENT : TL29
+    Characterizing to 8 GHz 
+
+COMPONENT : TL28
+    Characterizing to 8 GHz 
+
+COMPONENT : TL27
+    Characterizing to 8 GHz 
+
+COMPONENT : TL26
+    Characterizing to 8 GHz 
+
+COMPONENT : TL25
+    Characterizing to 8 GHz 
+
+COMPONENT : TL24
+    Characterizing to 8 GHz 
+
+COMPONENT : TL23
+    Characterizing to 8 GHz 
+
+COMPONENT : TL22
+    Characterizing to 8 GHz 
+
+COMPONENT : TL21
+    Characterizing to 8 GHz 
+
+COMPONENT : TL20
+    Characterizing to 8 GHz 
+
+COMPONENT : TL19
+    Characterizing to 8 GHz 
+
+COMPONENT : TL18
+    Characterizing to 8 GHz 
+
+COMPONENT : TL17
+    Characterizing to 8 GHz 
+
+COMPONENT : TL16
+    Characterizing to 8 GHz 
+
+COMPONENT : TL15
+    Characterizing to 8 GHz 
+
+COMPONENT : TL14
+    Characterizing to 8 GHz 
+
+COMPONENT : TL13
+    Characterizing to 8 GHz 
+
+COMPONENT : TL12
+    Characterizing to 8 GHz 
+
+COMPONENT : TL11
+    Characterizing to 8 GHz 
+
+COMPONENT : TL10
+    Characterizing to 8 GHz 
+
+COMPONENT : TL9
+    Characterizing to 8 GHz 
+
+COMPONENT : TL8
+    Characterizing to 8 GHz 
+
+COMPONENT : TL7
+    Characterizing to 8 GHz 
+
+COMPONENT : TL4
+    Characterizing to 8 GHz 
+
+COMPONENT : TL3
+    Characterizing to 8 GHz 
+
+COMPONENT : TL2
+    Characterizing to 8 GHz 
+
+COMPONENT : TL5
+    Characterizing to 8 GHz 
+
+COMPONENT : TL6
+    Characterizing to 8 GHz 
+
+COMPONENT : TL1
+    Characterizing to 8 GHz 
+
+    Matrix is singular (detected between nodes or branches `N__23' and `LPF2.CMP1.i2').
+Adding gmin to branches
+..
+
+COMPONENT : X8.AMP1.SDD3P3
+    Characterizing to 8 GHz 
+
+    Use an adaptive sample spacing of 15.63 MHz.
+
+COMPONENT : X1.MIX2
+    Characterizing to 8 GHz 
+
+    Use an adaptive sample spacing of 1.953 MHz.
+.
+COMPONENT : X1.MIX1
+    Characterizing to 8 GHz 
+
+    Use an adaptive sample spacing of 1.953 MHz.
+.
+
+TRAN Sweep2[1].Tran1[3/5] <SignalGenerator_lib:IQ Modulator:schematic>  IPwrDBM=-10  time=(0 s->200 ns)
+
+
+COMPONENT : X9.SnP1.CMP1
+    Characterizing to 6.01 GHz 
+
+COMPONENT : X7.SnP1.CMP1
+    Characterizing to 8 GHz 
+
+COMPONENT : X5.SnP1.CMP1
+    Characterizing to 6.01 GHz 
+
+COMPONENT : X4.SnP1.CMP1
+    Characterizing to 6.01 GHz 
+
+COMPONENT : X3.SnP1.CMP1
+    Characterizing to 8 GHz 
+
+COMPONENT : X2.SnP1.CMP1
+    Characterizing to 8 GHz 
+
+COMPONENT : X8.AMP1.SDD3P3
+    Characterizing to 8 GHz 
+
+    Use an adaptive sample spacing of 15.63 MHz.
+
+COMPONENT : X1.MIX2
+    Characterizing to 8 GHz 
+
+    Use an adaptive sample spacing of 1.953 MHz.
+.
+COMPONENT : X1.MIX1
+    Characterizing to 8 GHz 
+
+    Use an adaptive sample spacing of 1.953 MHz.
+..
+COMPONENT : TL52
+    Characterizing to 8 GHz 
+
+COMPONENT : TL51
+    Characterizing to 8 GHz 
+
+COMPONENT : TL50
+    Characterizing to 8 GHz 
+
+COMPONENT : TL49
+    Characterizing to 8 GHz 
+
+COMPONENT : TL48
+    Characterizing to 8 GHz 
+
+COMPONENT : TL47
+    Characterizing to 8 GHz 
+
+COMPONENT : TL46
+    Characterizing to 8 GHz 
+
+COMPONENT : TL45
+    Characterizing to 8 GHz 
+
+COMPONENT : TL40
+    Characterizing to 8 GHz 
+
+COMPONENT : TL41
+    Characterizing to 8 GHz 
+
+COMPONENT : TL42
+    Characterizing to 8 GHz 
+
+COMPONENT : TL39
+    Characterizing to 8 GHz 
+
+COMPONENT : TL43
+    Characterizing to 8 GHz 
+
+COMPONENT : TL36
+    Characterizing to 8 GHz 
+
+COMPONENT : TL44
+    Characterizing to 8 GHz 
+
+COMPONENT : TL34
+    Characterizing to 8 GHz 
+
+COMPONENT : TL33
+    Characterizing to 8 GHz 
+
+COMPONENT : TL31
+    Characterizing to 8 GHz 
+
+COMPONENT : TL30
+    Characterizing to 8 GHz 
+
+COMPONENT : TL29
+    Characterizing to 8 GHz 
+
+COMPONENT : TL28
+    Characterizing to 8 GHz 
+
+COMPONENT : TL27
+    Characterizing to 8 GHz 
+
+COMPONENT : TL26
+    Characterizing to 8 GHz 
+
+COMPONENT : TL25
+    Characterizing to 8 GHz 
+
+COMPONENT : TL24
+    Characterizing to 8 GHz 
+
+COMPONENT : TL23
+    Characterizing to 8 GHz 
+
+COMPONENT : TL22
+    Characterizing to 8 GHz 
+
+COMPONENT : TL21
+    Characterizing to 8 GHz 
+
+COMPONENT : TL20
+    Characterizing to 8 GHz 
+
+COMPONENT : TL19
+    Characterizing to 8 GHz 
+
+COMPONENT : TL18
+    Characterizing to 8 GHz 
+
+COMPONENT : TL17
+    Characterizing to 8 GHz 
+
+COMPONENT : TL16
+    Characterizing to 8 GHz 
+
+COMPONENT : TL15
+    Characterizing to 8 GHz 
+
+COMPONENT : TL14
+    Characterizing to 8 GHz 
+
+COMPONENT : TL13
+    Characterizing to 8 GHz 
+
+COMPONENT : TL12
+    Characterizing to 8 GHz 
+
+COMPONENT : TL11
+    Characterizing to 8 GHz 
+
+COMPONENT : TL10
+    Characterizing to 8 GHz 
+
+COMPONENT : TL9
+    Characterizing to 8 GHz 
+
+COMPONENT : TL8
+    Characterizing to 8 GHz 
+
+COMPONENT : TL7
+    Characterizing to 8 GHz 
+
+COMPONENT : TL4
+    Characterizing to 8 GHz 
+
+COMPONENT : TL3
+    Characterizing to 8 GHz 
+
+COMPONENT : TL2
+    Characterizing to 8 GHz 
+
+COMPONENT : TL5
+    Characterizing to 8 GHz 
+
+COMPONENT : TL6
+    Characterizing to 8 GHz 
+
+COMPONENT : TL1
+    Characterizing to 8 GHz 
+
+    Matrix is singular (detected between nodes or branches `N__23' and `LPF2.CMP1.i2').
+Adding gmin to branches
+..
+
+COMPONENT : X8.AMP1.SDD3P3
+    Characterizing to 8 GHz 
+
+    Use an adaptive sample spacing of 15.63 MHz.
+
+COMPONENT : X1.MIX2
+    Characterizing to 8 GHz 
+
+    Use an adaptive sample spacing of 1.953 MHz.
+.
+COMPONENT : X1.MIX1
+    Characterizing to 8 GHz 
+
+    Use an adaptive sample spacing of 1.953 MHz.
+.
+
+TRAN Sweep2[1].Tran1[4/5] <SignalGenerator_lib:IQ Modulator:schematic>  IPwrDBM=-5  time=(0 s->200 ns)
+
+
+COMPONENT : X9.SnP1.CMP1
+    Characterizing to 6.01 GHz 
+
+COMPONENT : X7.SnP1.CMP1
+    Characterizing to 8 GHz 
+
+COMPONENT : X5.SnP1.CMP1
+    Characterizing to 6.01 GHz 
+
+COMPONENT : X4.SnP1.CMP1
+    Characterizing to 6.01 GHz 
+
+COMPONENT : X3.SnP1.CMP1
+    Characterizing to 8 GHz 
+
+COMPONENT : X2.SnP1.CMP1
+    Characterizing to 8 GHz 
+
+COMPONENT : X8.AMP1.SDD3P3
+    Characterizing to 8 GHz 
+
+    Use an adaptive sample spacing of 15.63 MHz.
+
+COMPONENT : X1.MIX2
+    Characterizing to 8 GHz 
+
+    Use an adaptive sample spacing of 1.953 MHz.
+.
+COMPONENT : X1.MIX1
+    Characterizing to 8 GHz 
+
+    Use an adaptive sample spacing of 1.953 MHz.
+.
+COMPONENT : TL52
+    Characterizing to 8 GHz 
+
+COMPONENT : TL51
+    Characterizing to 8 GHz 
+
+COMPONENT : TL50
+    Characterizing to 8 GHz 
+
+COMPONENT : TL49
+    Characterizing to 8 GHz 
+
+COMPONENT : TL48
+    Characterizing to 8 GHz 
+
+COMPONENT : TL47
+    Characterizing to 8 GHz 
+
+COMPONENT : TL46
+    Characterizing to 8 GHz 
+
+COMPONENT : TL45
+    Characterizing to 8 GHz 
+
+COMPONENT : TL40
+    Characterizing to 8 GHz 
+
+COMPONENT : TL41
+    Characterizing to 8 GHz 
+
+COMPONENT : TL42
+    Characterizing to 8 GHz 
+
+COMPONENT : TL39
+    Characterizing to 8 GHz 
+
+COMPONENT : TL43
+    Characterizing to 8 GHz 
+
+COMPONENT : TL36
+    Characterizing to 8 GHz 
+
+COMPONENT : TL44
+    Characterizing to 8 GHz 
+
+COMPONENT : TL34
+    Characterizing to 8 GHz 
+
+COMPONENT : TL33
+    Characterizing to 8 GHz 
+
+COMPONENT : TL31
+    Characterizing to 8 GHz 
+
+COMPONENT : TL30
+    Characterizing to 8 GHz 
+
+COMPONENT : TL29
+    Characterizing to 8 GHz 
+
+COMPONENT : TL28
+    Characterizing to 8 GHz 
+
+COMPONENT : TL27
+    Characterizing to 8 GHz 
+
+COMPONENT : TL26
+    Characterizing to 8 GHz 
+
+COMPONENT : TL25
+    Characterizing to 8 GHz 
+
+COMPONENT : TL24
+    Characterizing to 8 GHz 
+
+COMPONENT : TL23
+    Characterizing to 8 GHz 
+
+COMPONENT : TL22
+    Characterizing to 8 GHz 
+
+COMPONENT : TL21
+    Characterizing to 8 GHz 
+
+COMPONENT : TL20
+    Characterizing to 8 GHz 
+
+COMPONENT : TL19
+    Characterizing to 8 GHz 
+
+COMPONENT : TL18
+    Characterizing to 8 GHz 
+
+COMPONENT : TL17
+    Characterizing to 8 GHz 
+
+COMPONENT : TL16
+    Characterizing to 8 GHz 
+
+COMPONENT : TL15
+    Characterizing to 8 GHz 
+
+COMPONENT : TL14
+    Characterizing to 8 GHz 
+
+COMPONENT : TL13
+    Characterizing to 8 GHz 
+
+COMPONENT : TL12
+    Characterizing to 8 GHz 
+
+COMPONENT : TL11
+    Characterizing to 8 GHz 
+
+COMPONENT : TL10
+    Characterizing to 8 GHz 
+
+COMPONENT : TL9
+    Characterizing to 8 GHz 
+
+COMPONENT : TL8
+    Characterizing to 8 GHz 
+
+COMPONENT : TL7
+    Characterizing to 8 GHz 
+
+COMPONENT : TL4
+    Characterizing to 8 GHz 
+
+COMPONENT : TL3
+    Characterizing to 8 GHz 
+
+COMPONENT : TL2
+    Characterizing to 8 GHz 
+
+COMPONENT : TL5
+    Characterizing to 8 GHz 
+
+COMPONENT : TL6
+    Characterizing to 8 GHz 
+
+COMPONENT : TL1
+    Characterizing to 8 GHz 
+
+    Matrix is singular (detected between nodes or branches `N__23' and `LPF2.CMP1.i2').
+Adding gmin to branches
+..
+
+COMPONENT : X8.AMP1.SDD3P3
+    Characterizing to 8 GHz 
+
+    Use an adaptive sample spacing of 15.63 MHz.
+
+COMPONENT : X1.MIX2
+    Characterizing to 8 GHz 
+
+    Use an adaptive sample spacing of 1.953 MHz.
+.
+COMPONENT : X1.MIX1
+    Characterizing to 8 GHz 
+
+    Use an adaptive sample spacing of 1.953 MHz.
+.
+
+TRAN Sweep2[1].Tran1[5/5] <SignalGenerator_lib:IQ Modulator:schematic>  IPwrDBM=0  time=(0 s->200 ns)
+
+Warning detected by hpeesofsim during circuit set up.
+    Unable to resolve variable(s) or functions(s) in expression ` Vfund=Vout[1]'
+        Vout
+Warning detected by hpeesofsim during circuit set up.
+    Unable to resolve variable(s) or functions(s) in expression `Ibb0=real(Ibb[0])'
+        Ibb
+Warning detected by hpeesofsim during circuit set up.
+    Unable to resolve variable(s) or functions(s) in expression `Qbb0=real(Qbb[0])'
+        Qbb
+
+Resource usage:
+  Total stopwatch time     =   220.09 seconds.
+

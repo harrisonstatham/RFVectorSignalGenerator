@@ -1,0 +1,77 @@
+<ADSWorkspace Revision="35" Version="100">
+    <Workspace Name="">
+        <Library Name="ads_standard_layers" />
+        <Library Name="ads_schematic_layers" />
+        <Library Name="empro_standard_layers" />
+        <Library Name="ads_builtin" />
+        <Library Name="ads_standard_layers_ic" />
+        <Library Name="ads_schematic_layers_ic" />
+        <Library Name="ads_schematic_ports_ic" />
+        <Library Name="ads_rflib" />
+        <Library Name="ads_sources" />
+        <Library Name="ads_simulation" />
+        <Library Name="ads_tlines" />
+        <Library Name="ads_bondwires" />
+        <Library Name="ads_datacmps" />
+        <Library Name="ads_behavioral" />
+        <Library Name="ads_textfonts" />
+        <Library Name="ads_common_cmps" />
+        <Library Name="ads_designs" />
+        <Library Name="ads_verification_test_bench" />
+        <Library Name="SignalGenerator_lib" />
+        <Preferences Name="layout.prf" />
+        <Preferences Name="schematic.prf" />
+        <LibraryDefs Name="lib.defs" />
+        <ConfigFile Name="de_sim.cfg" />
+        <ConfigFile Name="hpeesofsim.cfg" />
+        <Library Name="RF_Transistors" />
+        <Library Name="Analog_Parts" />
+        <Library Name="Microwave_Transistors" />
+        <Log Name="search_history.log" />
+        <Library Name="MDLXS1_tech" />
+        <Library Name="MDLXS1" />
+        <Library Name="MDLXSUB1_tech" />
+        <Library Name="MDLXSUB1" />
+        <Dataset Name="SignalGenerator.ds" />
+        <Log Name="netlist.log" />
+        <Preferences Name="ads_sources_lay.prf" />
+        <Preferences Name="SignalGenerator_lib_lay.prf" />
+        <ConfigFile Name="dds.cfg" />
+        <Folder Name="IQModulator">
+            <Cell Name="SignalGenerator_lib:IQModulatorIdeal" />
+            <Cell Name="SignalGenerator_lib:TI_TRF370417" />
+            <Notebook Name="Readme.nbook" />
+            <Cell Name="SignalGenerator_lib:ADI_HMC349ALP4CE" />
+            <Cell Name="SignalGenerator_lib:Peregrine_PE43711" />
+            <Cell Name="SignalGenerator_lib:TI_TRF37A" />
+            <Cell Name="SignalGenerator_lib:DA_LCLowpassDT_IQ_Modulator" />
+        </Folder>
+        <Folder Name="RF Output" />
+        <Cell Name="SignalGenerator_lib:IQ Modulator" />
+        <Folder Name="Clock Source" />
+        <Folder Name="Synthesizer" />
+        <Data_Display Name="IQ Modulator.dds" />
+        <Dataset Name="IQ_Modulator.ds" />
+        <Substrate Name="SignalGenerator_lib:tech.subst" />
+        <Folder Name="Misc">
+            <Cell Name="SignalGenerator_lib:MicrostripLossTest" />
+            <Data_Display Name="MicrostripLossTest.dds" />
+            <Cell Name="SignalGenerator_lib:RF_PI_PAD" />
+        </Folder>
+        <Dataset Name="MicrostripLossTest.ds" />
+        <Dataset Name="ADI_HMC349ALP4CE_Test.ds" />
+        <Dataset Name="TI_TRF37A_Test.ds" />
+        <Folder Name="Component Tests">
+            <Cell Name="SignalGenerator_lib:ADI_HMC349ALP4CE_Test" />
+            <Data_Display Name="ADI_HMC349ALP4CE_Test.dds" />
+            <Cell Name="SignalGenerator_lib:TI_TRF37A_Test" />
+            <Data_Display Name="TI_TRF37A_Test.dds" />
+        </Folder>
+        <Preferences Name="ads_behavioral_lay.prf" />
+        <Preferences Name="ads_builtin_lay.prf" />
+        <Preferences Name="ads_datacmps_lay.prf" />
+        <Preferences Name="ads_rflib_lay.prf" />
+        <Preferences Name="ads_tlines_lay.prf" />
+        <Preferences Name="SignalGenerator_lib_sch.prf" />
+    </Workspace>
+</ADSWorkspace>

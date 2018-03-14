@@ -1,0 +1,25 @@
+
+hpeesofsim (*) 470.shp Oct 16 2017, MINT version 4
+    (64-bit windows built: Tue Oct 17, 2017 04:23:43 +0000)
+Copyright 1989 - 2017 Keysight Technologies.
+
+
+COMPONENT : X1.MIX2
+    Characterizing to 32 GHz 
+
+    Use an adaptive sample spacing of 7.813 MHz.
+.
+COMPONENT : X1.MIX1
+    Characterizing to 32 GHz 
+
+    Use an adaptive sample spacing of 7.813 MHz.
+.
+
+TRAN Tran1[1] <SignalGenerator_lib:SignalGenerator:schematic>   time=(0 s->1 us)
+Warning detected by hpeesofsim during TRAN analysis `Tran1'.
+    MaxTimeStep reduced to  1.563e-11 to resolve source bandwidth.
+
+
+Resource usage:
+  Total stopwatch time     =    98.61 seconds.
+

@@ -1,0 +1,206 @@
+; Top Design: "SignalGenerator_lib:IQ Modulator:schematic"
+; Netlisted using Hierarchy Policy: "Standard"
+
+Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="SignalGenerator_lib:IQ Modulator:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
+; Library Name: SignalGenerator_lib
+; Cell Name: ADI_HMC349ALP4CE
+; View Name: schematic
+define ADI_HMC349ALP4CE ( P1  P2  P3 ) 
+;parameters 
+#uselib "ckt" , "SnP"
+SnP:SnP1  P1 P3 P2 NumPorts=3 File="C:\Users\HarrisonStatham\ADS\SignalGenerator_wrk\data\HMC349ALP4CE\HMC349ALP4CE_RF1sel_Vctl=5V_EN=0V_De-embedded.s3p" Type="touchstone" InterpMode="linear" InterpDom="" ExtrapMode="constant" Temp=27.0 CheckPassivity=0 
+end ADI_HMC349ALP4CE
+
+; Library Name: SignalGenerator_lib
+; Cell Name: IQModulatorIdeal
+; View Name: schematic
+define IQModulatorIdeal ( I  Q  RF  LO_I  LO_Q ) 
+;parameters 
+Mixer:MIX1  I N__2 LO_I SideBand=1 ConvGain=dbpolar(0,0) S11=polar(0,0) S22=polar(0,180) S33=0 GainCompType=0 ReferToInput=0 GainCompSat=5.0 dB GainComp=1.0 dB 
+Mixer:MIX2  Q N__5 LO_Q SideBand=1 ConvGain=dbpolar(0,0) S11=polar(0,0) S22=polar(0,180) S33=0 GainCompType=0 ReferToInput=0 GainCompSat=5.0 dB GainComp=1.0 dB 
+#uselib "sml" , "VSum"
+VSum:SUM1  N__2 N__5 RF 
+end IQModulatorIdeal
+
+; Library Name: SignalGenerator_lib
+; Cell Name: Peregrine_PE43711
+; View Name: schematic
+define Peregrine_PE43711 ( P1  P2 ) 
+;parameters 
+#uselib "ckt" , "SnP"
+SnP:SnP1  P1 P2 NumPorts=2 File="C:\Users\HarrisonStatham\ADS\SignalGenerator_wrk\data\PE43711_SParams\S_PE43711P_25C_3p300V_3p000V_0p000V_LS_ATT_0p00dB_S2P_SN_5_A0137A.s2p" Type="touchstone" InterpMode="linear" InterpDom="" ExtrapMode="constant" Temp=27.0 CheckPassivity=0 
+end Peregrine_PE43711
+
+; Library Name: SignalGenerator_lib
+; Cell Name: TI_TRF37A
+; View Name: schematic
+define TI_TRF37A ( P1  P2 ) 
+;parameters 
+#uselib "sml" , "Amplifier2"
+Amplifier2:AMP1  P1 P2 S21=dbpolar(11,0) S11=dbpolar(-14,0) S22=polar(0,180) S12=dbpolar(-18,0) NF=5.5 dB GainCompType=0 ReferToInput=0 TOI=17 GainCompSat=5.0 dB GainComp=1.0 dB ClipDataFile=1 
+end TI_TRF37A
+
+IQModulatorIdeal:X1  VI VQ N__26 LO_I LO_Q 
+C:C2  N__13 N__7 C=1 nF 
+#uselib "ckt" , "AttenuatorPiTee"
+AttenuatorPiTee:PAD2  N__8 N__5 NetType=0 Loss=0. dB R1=50. Ohm R2=50. Ohm CheckPassivity=1 
+
+TL_W=14.85 mil
+MLIN2:TL1  N__12 VI Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL6  N__7 N__17 Subst="MSub1" W=TL_W L=100.0 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL5  N__0 N__16 Subst="MSub1" W=TL_W L=100.0 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL2  N__5 VQ Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+C:C1  N__10 N__0 C=1 nF 
+Port:PORT4  N__17 0 Num=6 Z=50 Ohm P[1]=polar(dbmtow(5),90) Freq[1]=LO_Freq    Noise=yes Pac=polar(dbmtow(0),0) 
+Port:PORT3  N__16 0 Num=5 Z=50 Ohm P[1]=polar(dbmtow(5),0) Freq[1]=LO_Freq    Noise=yes Pac=polar(dbmtow(0),0) 
+R:R6  Vpwrdet 0 R=50 Ohm Noise=yes 
+R:R3  Vout1 0 R=50 Ohm Noise=yes 
+
+LO_Freq=1 GHz
+Tran:Tran1 StartTime=0.0 nsec StopTime=200 nsec MaxTimeStep=20 nsec LimitStepForTL=yes TimeStepControl=2 TruncTol=7.0 ChargeTol=1.0e-14 IntegMethod=0 MaxGearOrder=2 \
+Mu=0.5 MaxOrder=4 Freq[1]=1.0 GHz Order[1]=3 HB_Window=no \
+HB_Sol=no ImpApprox=no ShortTL_Delay=1.0 psec ImpMode=1 UseInitCond=no \
+LoadGminDC=no CheckKCL=yes CheckOnlyDeltaV=yes OverloadAlert=no DeviceBypass=no \
+MaxIters=10 MaxItersDC=200 DevOpPtLevel=0 StatusLevel=2 OutputAllPoints=yes \
+NoiseScale=1 ImpEnforcePassivity=yes \
+OutputPlan="Tran1_Output" 
+
+OutputPlan:Tran1_Output \
+      Type="Output" \
+      UseNodeNestLevel=yes \
+      NodeNestLevel=2 \
+      UseEquationNestLevel=yes \
+      EquationNestLevel=2 \
+      UseSavedEquationNestLevel=yes \
+      SavedEquationNestLevel=2 \
+      UseDeviceCurrentNestLevel=no \
+      DeviceCurrentNestLevel=0 \
+      DeviceCurrentDeviceType="All" \
+      DeviceCurrentSymSyntax=yes \
+      UseCurrentNestLevel=yes \
+      CurrentNestLevel=999 \
+      UseDeviceVoltageNestLevel=no \
+      DeviceVoltageNestLevel=0 \
+      DeviceVoltageDeviceType="All"
+
+MLIN2:TL3  LO_I N__10 Subst="MSub1" W=TL_W L=100.0 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL4  LO_Q N__13 Subst="MSub1" W=TL_W L=100.0 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+model MSub1 MSUB H=6.7 mil Er=3.66 Mur=1 Cond=5.8e7 Hu=3.93701e+34 mil T=1 mil TanD=0.0125 Rough=0 mil DielectricLossModel=1 FreqForEpsrTanD=1.0 GHz LowFreqForTanD=1.0 kHz HighFreqForTanD=1.0 THz RoughnessModel=2 
+#uselib "ckt" , "AttenuatorPiTee"
+AttenuatorPiTee:PAD1  N__6 N__12 NetType=0 Loss=0. dB R1=50. Ohm R2=50. Ohm CheckPassivity=1 
+MLIN2:TL7  N__15 N__6 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL8  N__14 N__8 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+C:C3  N__15 N__21 C=1 nF 
+C:C4  N__14 N__23 C=1 nF 
+#uselib "ckt" , "LPF_Butterworth"
+LPF_Butterworth:LPF1  N__20 N__21 Fpass=1 GHz Apass=3.0103 dB Fstop=1.2 GHz Astop=20 dB StopType="open" N=0 IL=0 dB Qu=1E308 Z1=50 Ohm Z2=50 Ohm 
+#uselib "ckt" , "LPF_Butterworth"
+LPF_Butterworth:LPF2  N__22 N__23 Fpass=1 GHz Apass=3.0103 dB Fstop=1.2 GHz Astop=20 dB StopType="open" N=0 IL=0 dB Qu=1E308 Z1=50 Ohm Z2=50 Ohm 
+C:C5  N__20 N__19 C=1 nF 
+C:C6  N__22 N__18 C=1 nF 
+MLIN2:TL9  N__24 N__18 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL10  N__25 N__19 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL11  V_RF_OUT N__26 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+#uselib "ckt" , "AttenuatorPiTee"
+AttenuatorPiTee:PAD3  N__28 N__24 NetType=0 Loss=0. dB R1=50. Ohm R2=50. Ohm CheckPassivity=1 
+#uselib "ckt" , "AttenuatorPiTee"
+AttenuatorPiTee:PAD4  N__27 N__25 NetType=0 Loss=0. dB R1=50. Ohm R2=50. Ohm CheckPassivity=1 
+MLIN2:TL12  N__31 N__27 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL13  N__33 N__28 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+Peregrine_PE43711:X2  N__32 N__31 
+Peregrine_PE43711:X3  N__41 N__33 
+MLIN2:TL14  N__40 N__39 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL15  N__37 N__29 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+#uselib "ckt" , "AttenuatorPiTee"
+AttenuatorPiTee:PAD5  N__38 N__40 NetType=0 Loss=0. dB R1=50. Ohm R2=50. Ohm CheckPassivity=1 
+#uselib "ckt" , "AttenuatorPiTee"
+AttenuatorPiTee:PAD6  N__36 N__37 NetType=0 Loss=0. dB R1=50. Ohm R2=50. Ohm CheckPassivity=1 
+C:C7  N__35 N__29 C=1 nF 
+C:C8  N__30 N__39 C=1 nF 
+MLIN2:TL16  N__38 N__32 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL17  N__36 N__41 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL18  N__35 N__34 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL19  N__30 N__44 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+ADI_HMC349ALP4CE:X4  N__45 N__43 N__44 
+ADI_HMC349ALP4CE:X5  N__46 N__42 N__34 
+MLIN2:TL20  N__47 I_INT Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL21  N__48 N__45 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL22  N__49 N__50 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+#uselib "ckt" , "AttenuatorPiTee"
+AttenuatorPiTee:PAD7  N__48 N__49 NetType=0 Loss=0. dB R1=50. Ohm R2=50. Ohm CheckPassivity=1 
+C:C9  N__47 N__50 C=1 nF 
+MLIN2:TL23  N__52 I_EXT Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL24  N__53 N__43 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL25  N__54 N__55 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+#uselib "ckt" , "AttenuatorPiTee"
+AttenuatorPiTee:PAD8  N__53 N__54 NetType=0 Loss=0. dB R1=50. Ohm R2=50. Ohm CheckPassivity=1 
+C:C10  N__52 N__55 C=1 nF 
+MLIN2:TL26  N__64 N__57 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL27  N__60 N__46 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL28  N__59 Q_INT Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL29  N__58 Q_EXT Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL30  N__65 N__42 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL31  N__61 N__63 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+#uselib "ckt" , "AttenuatorPiTee"
+AttenuatorPiTee:PAD9  N__60 N__64 NetType=0 Loss=0. dB R1=50. Ohm R2=50. Ohm CheckPassivity=1 
+#uselib "ckt" , "AttenuatorPiTee"
+AttenuatorPiTee:PAD10  N__65 N__61 NetType=0 Loss=0. dB R1=50. Ohm R2=50. Ohm CheckPassivity=1 
+C:C11  N__59 N__57 C=1 nF 
+C:C12  N__58 N__63 C=1 nF 
+Port:PORT5  I_INT 0 Num=1 Z=50 Ohm P[1]=polar(dbmtow(IPwrDBM),0) Freq[1]=IFreq    Noise=yes Pac=polar(dbmtow(0),0) 
+Port:PORT7  Q_INT 0 Num=3 Z=50 Ohm P[1]=polar(dbmtow(-50),0) Freq[1]=250 MHz    Noise=yes Pac=polar(dbmtow(0),0) 
+C:C17  N__69 N__70 C=1 nF 
+MLIN2:TL33  N__81 N__74 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL34  N__82 N__76 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL44  N__87 Vpwrdet Subst="MSub1" W=TL_W L=100.0 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL36  N__80 N__71 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL43  N__72 N__70 Subst="MSub1" W=TL_W L=100.0 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MTEE_ADS:Tee1  N__77 N__73 N__72 Subst="MSub1" W1=TL_W W2=TL_W W3=TL_W 
+MLIN2:TL39  N__85 N__68 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+#uselib "ckt" , "AttenuatorPiTee"
+AttenuatorPiTee:PAD11  N__85 N__80 NetType=0 Loss=0. dB R1=50. Ohm R2=50. Ohm CheckPassivity=1 
+MLIN2:TL42  N__75 N__77 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+#uselib "ckt" , "AttenuatorPiTee"
+AttenuatorPiTee:PAD13  N__74 N__82 NetType=0 Loss=0. dB R1=50. Ohm R2=50. Ohm CheckPassivity=1 
+#uselib "ckt" , "AttenuatorPiTee"
+AttenuatorPiTee:PAD14  N__86 N__75 NetType=0 Loss=0. dB R1=50. Ohm R2=50. Ohm CheckPassivity=1 
+MLIN2:TL41  N__78 N__86 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+C:C14  V_RF_OUT N__71 C=1 nF 
+TI_TRF37A:X8  N__79 N__78 
+C:C16  N__84 N__76 C=1 nF 
+MLIN2:TL40  N__84 N__79 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+Peregrine_PE43711:X7  N__68 N__81 
+R:R4  N__69 N__87 R=100 Ohm Noise=yes 
+MLIN2:TL45  N__89 N__88 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL46  N__91 N__90 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+#uselib "ckt" , "AttenuatorPiTee"
+AttenuatorPiTee:PAD15  N__91 N__89 NetType=0 Loss=0. dB R1=50. Ohm R2=50. Ohm CheckPassivity=1 
+C:C18  N__73 N__88 C=1 nF 
+MLIN2:TL47  N__98 N__102 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL48  N__104 N__100 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL49  N__101 Vout2 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL50  N__95 Vout1 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL51  N__97 N__103 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL52  N__99 N__96 Subst="MSub1" W=TL_W L=10 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+#uselib "ckt" , "AttenuatorPiTee"
+AttenuatorPiTee:PAD16  N__104 N__98 NetType=0 Loss=0. dB R1=50. Ohm R2=50. Ohm CheckPassivity=1 
+#uselib "ckt" , "AttenuatorPiTee"
+AttenuatorPiTee:PAD17  N__97 N__99 NetType=0 Loss=0. dB R1=50. Ohm R2=50. Ohm CheckPassivity=1 
+C:C19  N__101 N__102 C=1 nF 
+C:C20  N__95 N__96 C=1 nF 
+ADI_HMC349ALP4CE:X9  N__103 N__100 N__90 
+R:R5  Vout2 0 R=50 Ohm Noise=yes 
+
+SymbolRate=24.3 kHz
+tstep=1/(10*SymbolRate)
+RFfreq=1 GHz
+V_peak=1/0.691
+aele Vfund=Vout[1];Ibb0=real(Ibb[0]);Qbb0=real(Qbb[0]);
+ParamSweep:Sweep2 SimInstanceName[1]="Tran1" StatusLevel=2 SweepVar="IPwrDBM" SweepPlan="Sweep2_stim" 
+
+SweepPlan: Sweep2_stim Start=- 20 Stop=0 Step=5 
+
+
+IPwrDBM=-10
+
+IFreq=100 MHz

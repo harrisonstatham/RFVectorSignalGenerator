@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      HarrisonStatham
+HostName                       Harrison
+ProcessIdentifier              6736
+ProcessCreationTime_UTC        1520954486
+ProcessCreationTime_Readable   Tue Mar 13 10:21:26 2018 Central Daylight Time
+AppIdentifier                  OA File System Design Manager
+OSType                         win32
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         C:\Users\HarrisonStatham\ADS\SignalGenerator_wrk\SignalGenerator_lib\%I%Q#20%Modulator\schematic\sch.oa.cdslck
+TimeEditLocked                 Wed Mar 14 08:30:57 2018 Central Daylight Time
